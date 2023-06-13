@@ -18,6 +18,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #231f207d;
+    backdrop-filter: blur(5px);
     z-index: 9;
     gap: 38em;
     top: 0;
@@ -42,7 +44,7 @@ body{
 
 .logo{
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
 }
 
 .logo-content{
@@ -75,10 +77,11 @@ button {
 
 .header-menu{
     display: flex;
-    justify-content: end;
+    justify-content: center;
+    text-align: center;
     align-items: center;
     padding: 0.5em 3.5em 0.5em 0.5em;
-    width: 100%;
+    width: 150%;
     gap: 2em;
 }
 
@@ -88,7 +91,7 @@ button {
     font-size: 1rem;
     font-weight: 400;
     transition: 0.6s;
-    color: #000;
+    color: #fff;
 }
 
 .header-link:hover{
@@ -104,6 +107,18 @@ button {
     display: flex;
 }
 
+.container-banner img{
+    cursor: pointer;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border: 3px solid #fff;
+    transition: 0.5s;
+}
+
+.container-banner:hover img{
+    border: 3px solid #fae313;
+}
+
 .banner{
     width: 100%;
     height: auto;
@@ -114,16 +129,76 @@ button {
     flex-direction: column;
     align-items: center;
     margin-top: 5em;
+    margin-bottom: 5%;
 }
 
 .unidades h2{
     font-size: 2rem;
+    margin-bottom: 5%;
+}
+  
+.strong-title{
+    color: #d9a300;
+}
+
+.gyms{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: hidden;
+    gap: 3em;
+    width: 60%;
+}
+
+.academia{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    margin: 1em;
+    width: 24em;
+    height: 15em; 
+    border-radius: 32px;
+    transition: 0.5s;
+}
+
+.academia:hover{
+    transform: scale(1.03);
+    box-shadow: 5px 5px 0 0 #fae313;
+}
+
+.academia span{
+    position: absolute;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    transition: 0.5s;
+    opacity: 0;
+    color: #fff;
+}
+
+.academia:hover, 
+.academia:hover span{
+    opacity: 1;
+}
+
+.academia img{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.academia img:hover{
+    filter: brightness(60%);
 }
 
 .video-wrapper{
     position: relative;
     width: 100%;
     height: 0;
+    margin-top: 5%;
     padding-bottom: 56%;
 }
   
@@ -134,10 +209,85 @@ button {
     width: 100%;
     height: 100%;
 }
-  
 
-.strong-title{
-    color: #d9a300;
+.div-menu {
+    border-right: 1px solid #575353;
+    margin: 5em;
+    height: 15em;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 23em;
+    background-color: #222;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    gap: 0.5em;
+}
+
+.hashtag{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hashtag p{
+    margin-top: 3%;
+    margin-right: 8%;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.hashtag-img{
+    width: 10em;
+    margin-right: 10%;
+    transition: 0.5s;
+}
+
+.hashtag-img:hover{
+    scale: 1.05;
+}
+
+.social-medias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-image {
+    width: 2em;
+    margin: 1em 1em 1em 0.2em;
+    transition: 0.5s;
+}
+
+.social-image:hover{
+    scale: 1.1;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 0.3em;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.menu-link:hover{
+    color: #fae313;
+}
+
+.strong{
+    color: #fae313;
 }
 
 .btn-home{
@@ -155,10 +305,9 @@ button {
 }
 
 .btn-home:hover{
-    background-color: #d9a300;
+    background-color: #fae313;
     scale: 1.1;
-    /* box-shadow: 0.1em 0.1em 0.1em 0.1em ; */
-    box-shadow: inset 1em 0.5em #d9a300;
+    box-shadow: inset 1em 0.5em #fae313;
 }
 
 .img-seta {
