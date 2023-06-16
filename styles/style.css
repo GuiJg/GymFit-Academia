@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 
 *{
     margin: 0;
@@ -10,22 +11,20 @@
 }
 
 body{
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: var(--cor-primeira);
 }
 
-.header{
+header{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #231f207d;
-    backdrop-filter: blur(5px);
+    gap: 25em;
     z-index: 9;
-    gap: 38em;
+    height: 6em;
     top: 0;
     left: 0;
     right: 0;
     padding: 1em;
+    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.18);
 }
 
 .header-scroll{
@@ -39,12 +38,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 5em;
 }
 
 .logo{
     width: 100%;
-    max-width: 600px;
 }
 
 .logo-content{
@@ -86,21 +83,22 @@ button {
 }
 
 .header-link{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 600;
     transition: 0.6s;
-    color: #fff;
+    color: #000;
 }
 
 .header-link:hover{
-    color: #fae313;
+    color: #d9a300;
 }
 
 .main-page{
     display: flex;
     justify-content: center;
+    margin-top: 1.5em;
 }
 
 .container-banner{
@@ -109,14 +107,16 @@ button {
 
 .container-banner img{
     cursor: pointer;
-    border-bottom-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border: 3px solid #fff;
+    background-position: center;
+    background-size: cover;
+    border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+    border-bottom: 3px solid #fff;
     transition: 0.5s;
 }
 
 .container-banner:hover img{
-    border: 3px solid #fae313;
+    border-bottom: 3px solid #fae313;
 }
 
 .banner{
@@ -129,11 +129,11 @@ button {
     flex-direction: column;
     align-items: center;
     margin-top: 5em;
-    margin-bottom: 5%;
 }
 
 .unidades h2{
     font-size: 2rem;
+    font-weight: 700;
     margin-bottom: 5%;
 }
   
@@ -147,7 +147,7 @@ button {
     justify-content: center;
     overflow-y: hidden;
     gap: 3em;
-    width: 60%;
+    width: 80%;
 }
 
 .academia{
@@ -158,14 +158,16 @@ button {
     position: relative;
     text-decoration: none;
     margin: 1em;
-    width: 24em;
-    height: 15em; 
-    border-radius: 32px;
+    width: 22em;
+    height: 13em; 
+    border-radius: 1.5em;
     transition: 0.5s;
+    border: 0.3em solid #fff;
+    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.18);
 }
 
 .academia:hover{
-    transform: scale(1.03);
+    transform: scale(1.02);
     box-shadow: 5px 5px 0 0 #fae313;
 }
 
@@ -194,12 +196,23 @@ button {
     filter: brightness(60%);
 }
 
+.background{
+    width: 100%;
+    height: 10em;
+    margin-top: 5%;
+    background-image: url(/assets/hashtag\ background.png);
+    background-position: center;
+}
+
 .video-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    overflow: hidden;
     width: 100%;
     height: 0;
-    margin-top: 5%;
-    padding-bottom: 56%;
+    padding-bottom: 50em;
 }
   
 .video-wrapper iframe{
@@ -207,7 +220,8 @@ button {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 64em;
+    padding-top: 10em;
 }
 
 .div-menu {
@@ -225,11 +239,19 @@ button {
     background-color: #222;
 }
 
+.gymfit img{
+    width: 100%;
+}
+
 .menu {
     display: flex;
     flex-direction: column;
     color: #fff;
     gap: 0.5em;
+}
+
+.menu h2{
+    font-size: 1.2rem;
 }
 
 .hashtag{
@@ -243,7 +265,8 @@ button {
 .hashtag p{
     margin-top: 3%;
     margin-right: 8%;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    font-weight: 600;
     color: #fff;
 }
 
@@ -276,14 +299,13 @@ button {
 .menu-link {
     text-decoration: none;
     color: #fff;
-    margin-left: 0.3em;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
     transition: 0.5s;
 }
 
 .menu-link:hover{
-    color: #fae313;
+    color: #d9a300;
 }
 
 .strong{
@@ -299,15 +321,16 @@ button {
     left: 95.2%;
     width: 3.5em;
     height: 3.5em;
-    border-radius: 2em;
+    border-radius: 1em;
     transition: 0.5s;
     background-color: #fff;
+    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.18);
 }
 
 .btn-home:hover{
     background-color: #fae313;
-    scale: 1.1;
     box-shadow: inset 1em 0.5em #fae313;
+    scale: 1.1;
 }
 
 .img-seta {
@@ -327,4 +350,64 @@ button {
 .baseboard-link{
     text-decoration: none;
     color: #000;
+}
+
+@media (max-width: 700px){
+
+    .header{
+        flex-direction: column;
+        gap: 0em;
+    }
+
+    .menu-button{
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-button img{
+        width: 2.2em;
+    }
+
+    .header-menu{
+        display: none;
+        flex-direction: column;
+        padding: 0;
+        margin-top: 1em;
+        gap: 1em;
+    }
+      
+    .header-menu.active{
+        display: flex;
+    }
+
+    .header-link{
+        font-size: 1.5rem;
+    }
+
+    .logo{
+        width: 100%;
+    }
+
+    .gyms{
+        width: 100%;
+    }
+    
+    .footer{
+        flex-direction: column;
+        height: 88em;
+    }
+
+    .div-menu{
+        border-right: none;
+        border-bottom: 1px solid;
+        height: 0;
+    }
+
+    .btn-home{
+        left: 80%;
+    }
+
+    .baseboard{
+        font-size: 1rem;
+    }
 }
